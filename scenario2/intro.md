@@ -1,0 +1,1 @@
+此操作範例是介紹 Docker Compose 的使用方式及其指令，並解釋 Docker 1.12 版新增的 DNS-based Service Discovery 機制，以及 Docker Network 的 VLAN 容器隔離功能，希望能幫忙您撰寫自己的 *docker-compose.yml* 檔案，並設計所需系統架構。
