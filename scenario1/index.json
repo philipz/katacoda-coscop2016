@@ -1,6 +1,6 @@
 {
     "backend": {
-        "imageid": "dind-direct"
+        "imageid": "ubuntu"
     },
     "details": {
         "steps": [
@@ -18,7 +18,6 @@
             }
         ],
         "intro": {
-            "courseData": "env-init.sh",
             "text": "intro.md"
         },
         "finish": {
