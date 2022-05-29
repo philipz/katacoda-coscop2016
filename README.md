@@ -1,1 +1,3 @@
-# katacoda-coscop2016
+# Katacoda to Killercoda
+
+Export for https://editor.katacoda.com/
