@@ -8,10 +8,16 @@
 * Postgres 資料負責持久儲存，以 Docker volume 掛載
 * Node.js Web 程式即時顯示所有投票結果
 
-##Install Docker Compose 1.8.0
-依照 [Compose 文件](https://github.com/docker/compose/releases)，執行 ```curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` > ./docker-compose```{{execute}} 
-和 `chmod +x ./docker-compose && sudo mv ./docker-compose /usr/local/bin/docker-compose`{{execute}} 
-，完成 docker-compose 安裝，一樣確認版本 `docker-compose -v`{{execute}} 。
+## Install Docker Compose 1.8.0
 
-##複製範例庫
-`git clone https://github.com/philipz/example-voting-app`{{execute}}
+依照 [Compose 文件](https://github.com/docker/compose/releases)，執行
+
+curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` > ./docker-compose
+```{{exec}}
+
+和 `chmod +x ./docker-compose && sudo mv ./docker-compose /usr/local/bin/docker-compose`{{exec}} 
+，完成 docker-compose 安裝，一樣確認版本 `docker-compose -v`{{exec}} 。
+
+## 複製範例庫
+
+`git clone https://github.com/philipz/example-voting-app`{{exec}}
