@@ -1,8 +1,8 @@
 {
     "live": true,
-    "pathwayId": "philipz",
-    "pathwayTitle": "philipz",
-    "id": "7",
+    "pathwayId": "philipz/swarm",
+    "pathwayTitle": "philipz/swarm",
+    "id": "1",
     "backend": {
         "imageid": "ubuntu"
     },
@@ -10,7 +10,7 @@
         "App"
     ],
     "environment": {
-        "uilayout": "terminal-v1",
+        "uilayout": "terminal-terminal-v1",
         "uidependencies": [
             "/socket.io/socket.io.js",
             "/javascripts/term.js",
@@ -22,24 +22,20 @@
     "details": {
         "steps": [
             {
-                "title": "複製程式碼",
+                "title": "New Swarm Mode Cluster",
                 "text": "step1.md"
             },
             {
-                "title": "撰寫 Docker Compose 定義檔",
+                "title": "建立 Galera Cluster",
                 "text": "step2.md"
             },
             {
-                "title": "準備測試腳本",
+                "title": "建立 Wordpress 服務",
                 "text": "step3.md"
             },
             {
-                "title": "撰寫 Circle CI 設定檔",
+                "title": "Swarm 服務擴展與升級",
                 "text": "step4.md"
-            },
-            {
-                "title": "使用 Circle CI 服務",
-                "text": "step5.md"
             }
         ],
         "intro": {
@@ -50,6 +46,6 @@
             "text": "finish.md"
         }
     },
-    "title": "Docker Compose & CircleCI",
-    "description": "利用投票微服務範例，來示範如何使用 Github 結合  CircleCI 自動化建構微服務架構中的單一容器"
+    "title": "Docker Swarm for MySQL Cluster & WordPress",
+    "description": "建立 MySQL Galera 叢集，用 Swarm Cluster 快速建立 Master/Master DB 架構"
 }

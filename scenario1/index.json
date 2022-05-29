@@ -1,29 +1,59 @@
 {
+    "live": true,
+    "pathwayId": "philipz",
+    "pathwayTitle": "philipz",
+    "id": "1",
     "backend": {
         "imageid": "ubuntu"
+    },
+    "files": [
+        "App"
+    ],
+    "environment": {
+        "uilayout": "terminal-v1",
+        "uidependencies": [
+            "/socket.io/socket.io.js",
+            "/javascripts/term.js",
+            "/javascripts/terminal-application.js"
+        ],
+        "hideintro": false,
+        "hidefinish": false
     },
     "details": {
         "steps": [
             {
-                "title": "投票系統架構",
+                "title": "步驟 1 - 啟動一個容器",
                 "text": "step1.md"
             },
             {
-                "title": "使用 Docker Compose 建置",
+                "title": "步驟 2 - 列出執行中的容器",
                 "text": "step2.md"
             },
             {
-                "title": "改用 .NET 版的 Worker",
+                "title": "步驟 3 - 綁定連接埠",
                 "text": "step3.md"
+            },
+            {
+                "title": "步驟 4 - 綁定連接埠",
+                "text": "step4.md"
+            },
+            {
+                "title": "步驟 5 - 掛載目錄",
+                "text": "step5.md"
+            },
+            {
+                "title": "步驟 6 - 在前台模式執行容器",
+                "text": "step6.md"
             }
         ],
         "intro": {
+            "courseData": "env-init.sh",
             "text": "intro.md"
         },
         "finish": {
             "text": "finish.md"
         }
     },
-    "title": "Docker 官方 Web 投票微服務範例",
-    "description": "利用 Docker Birthday #3 所提供的範例，來說明利用 Docker 建構微服務架構系統"
+    "title": "Docker 容器操作",
+    "description": "針對初學者，使其熟悉 Docker 相關指令及用法。"
 }

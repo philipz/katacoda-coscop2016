@@ -1,5 +1,1 @@
-# 準備執行環境
-1. 下載安裝 Docker Machine `sudo curl -L https://github.com/docker/machine/releases/download/v0.6.0/docker-machine-$(uname -s)-$(uname -m) > /usr/local/bin/docker-machine && sudo chmod +x /usr/local/bin/docker-machine`{{execute}} ，[安裝說明](https://docs.docker.com/machine/install-machine/)。
-2. 下載已準備好的mycert.pem：`curl -o mycert.pem http://linux.everfine.com.tw/mycert.pem`{{execute}}
-
-參考文件：[How to use docker-machine with Azure](https://azure.microsoft.com/zh-tw/documentation/articles/virtual-machines-linux-classic-docker-machine/)
+示範 Docker 在 CircleCI 的持續整合(CI)、持續交付(CD)之應用，以[之前的投票微服務課程](https://philipz.github.io/tech/2016/08/08/vote_microservice.html)中的 Vote 服務，修改其 Python 程式來操作，在 CircleCI 建置出 Docker 映像檔，並整合 Docker Compose 建置出開發環境，撰寫 Test Script (docker run、curl，或是其他測試軟體等) ，自動測試並驗證其程式正確性，再發布到 Docker Hub 上。

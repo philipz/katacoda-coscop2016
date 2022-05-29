@@ -1,4 +1,1 @@
-示範如何將書中 MySQL Galera 叢集，改寫 Compose YAML檔案及參數，建置出 DB Mater/Master 架構，再配合 WordPress，以及上一個練習，[Compose & Service Discovery](https://philipz.github.io/tech/2016/08/02/compose_dns.html) 所學習到的 DNS-based 負載平衡機制，架設 WP 的 HA （高可用性）架構。
-##Galera Cluster 原出處：
-* [Getting started Galera with Docker, part 1](http://galeracluster.com/2015/05/getting-started-galera-with-docker-part-1/) 
-* [Getting Started Galera with Docker, part 2](http://galeracluster.com/2015/05/getting-started-galera-with-docker-part-2-2/)
+原 fig 作者(被 Docker 併購，後來變成 Docker Compose) - Ben Firshman ，在 DockerCon 2016 Hackathon 分享他個人的小作品，[相關內容](https://github.com/bfirsh/serverless-docker)，[無伺服器架構](https://read01.com/RRQMLQ.html)，其中 [Docker 官方部落格](https://blog.docker.com/2016/06/building-serverless-apps-with-docker/)有解說整個實作內容，[簡體翻譯](https://linux.cn/article-7525-1.html)。是將第一個課程官方 Web 投票微服務範例改寫成 serverless 。

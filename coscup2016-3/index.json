@@ -1,8 +1,8 @@
 {
-    "live": true,
-    "pathwayId": "philipz",
-    "pathwayTitle": "philipz",
-    "id": "2",
+    "live": false,
+    "pathwayId": "docker/docker2016",
+    "pathwayTitle": "docker/docker2016",
+    "id": "3",
     "backend": {
         "imageid": "ubuntu"
     },
@@ -22,20 +22,8 @@
     "details": {
         "steps": [
             {
-                "title": "Just do \"make\"",
+                "title": "",
                 "text": "step1.md"
-            },
-            {
-                "title": "How it works? Makefile",
-                "text": "step2.md"
-            },
-            {
-                "title": "How it works? compile.sh",
-                "text": "step3.md"
-            },
-            {
-                "title": "How it works? copy_ldd.sh",
-                "text": "step4.md"
             }
         ],
         "intro": {
@@ -46,6 +34,6 @@
             "text": "finish.md"
         }
     },
-    "title": "Minimal Node.js Docker Image",
-    "description": "Use Enclose to compile the binary execute file."
+    "title": "Use Docker Machine with Azure",
+    "description": "Create Cloud VM on Microsoft Azure through Docker Machine"
 }

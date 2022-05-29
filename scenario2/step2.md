@@ -1,40 +1,33 @@
-##複製範例庫
-`git clone https://github.com/philipz/compose_dns`{{execute}} ，
-接著 `cd compose_dns`{{execute}} 。
-
-##docker-compose.yml
-此範例的 *docker-compose.yml* 定義檔內容如下：
+就來逐一解說，整個建置過程的每一個環節。
+## Makefile
+首先是利用 **GNU Make** 來執行定義好的 *Makefile* ，其中 *Makefile* 內容如下：
 ```
-version: '2' 
+NAME = minimal 
+APP_NAME = index.js 
+NODE_VERSION = 6.0.0 
  
-services: 
-   webapp: 
-       image: philipz/minimal 
+PWD := $(shell pwd) 
  
-   webproxy: 
-       build: webproxy 
-       ports: 
-        - "80:80"
+.PHONY: all 
+ 
+all: clean build 
+ 
+build: 
+        docker run -ti --rm -v $(PWD):/app node:$(NODE_VERSION) /app/compile.sh $(APP_NAME) $(NAME) 
+        echo 'FROM scratch\nADD build.tar.gz /\nCMD ["/app/$(NAME)"]' > Dockerfile 
+        docker build -t philipz/$(NAME) . 
+ 
+clean: clean-exe clean-build 
+ 
+clean-docker: 
+        docker rmi philipz/$(NAME) 
+clean-exe: 
+        sudo rm -f $(NAME) 
+clean-build: 
+        sudo rm -rf build  
+        sudo rm -f build.tar.gz
 ```
-由兩個服務所構成，*webapp* 是直接使用之前建置的 **philipz/minimal** 映像檔，而 *webproxy* 則是透過 webproxy 目錄底下的內容來建置所需映像檔。
-##webproxy
-*webproxy* 目錄包含兩個檔案，Nginx 所需要的設定檔 *proxy.conf* 和建置映像檔的 *Dockerfile* 。其中 *proxy.conf* 設定檔內容為：
-```
-server {
-    listen 80;
 
-    location / {
-        proxy_pass http://webapp:8000;
-    }
-}
-```
-透過 proxy_pass 功能將 HTTP request 轉送到後端的 webapp 容器的 8000 port ，單純提供 reverse proxy 功能。
+前面三行定義變數，可依需求修改， *NAME* 是這程式名稱，也是編譯出來的執行檔名稱，而 *APP_NAME* 是 Node.js 主程式名稱，*NODE_VERSION* 則是欲使用的 Node.js 版本，根據這版號當作 Docker 標籤(tag)來建置其映像檔。
 
-而 *Dockerfile* 是以 nignx:alpine 映像檔為基礎，將上述的 *proxy.conf* 覆蓋原本的配置設定。
-```
-FROM nginx:alpine
-RUN rm /etc/nginx/conf.d/*
-COPY proxy.conf /etc/nginx/conf.d/
-```
-最後先建置此範例 `docker-compose build`{{execute}}
-，再執行 `docker-compose up -d`{{execute}} 以背景模式運行。
+最主要是 `docker run -ti --rm -v $(PWD):/app node:$(NODE_VERSION) /app/compile.sh $(APP_NAME) $(NAME)` ，啟動官方 node 映像檔，並掛載目前所在目錄到容器的 */app* 目錄，再執行 *compile.sh* 這 bash script 程式。下一步驟便介紹 *compile.sh* 的內容。

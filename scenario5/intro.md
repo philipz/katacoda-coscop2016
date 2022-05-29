@@ -1,0 +1,1 @@
+此範例將上個練習 [Docker Compose for MySQL Cluster & WordPress](https://philipz.github.io/tech/2016/08/19/compose_galera_wp.html) ，改成 Docker new Swarm 方式，部署到多台伺服器，與前面練習相同，再配合 WordPress，達到動態配置和負載平衡的分散式架構，延伸 [Docker-Compose & Service Discovery](https://philipz.github.io/tech/2016/08/02/compose_dns.html) 課程，練習使用 docker swarm 及 docker service 等等新版指令，可動態擴展服務，訓練未來>實際營運環境之使用經驗。

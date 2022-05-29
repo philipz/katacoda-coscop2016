@@ -1,0 +1,1 @@
+利用這樣 DNS-based Service Discovery 機制，可免除掉架構上很多瑣碎的設定，直接以服務名稱就可查詢，讓 Nignx 原本 reverse proxy 功能還同時具備了 load balancing 作用。而這個操作情境，還介紹了 docker-compose 常用的指令，若需要更詳細的使用方法，建議直接使用 `docker-compose -h`{{execute}} 查詢，或閱讀 [Compose 官方文件](https://docs.docker.com/compose/)。

@@ -1,8 +1,8 @@
 {
     "live": true,
-    "pathwayId": "philipz",
-    "pathwayTitle": "philipz",
-    "id": "7",
+    "pathwayId": "docker/docker2016",
+    "pathwayTitle": "docker/docker2016",
+    "id": "2",
     "backend": {
         "imageid": "ubuntu"
     },
@@ -22,24 +22,16 @@
     "details": {
         "steps": [
             {
-                "title": "複製程式碼",
+                "title": "準備環境",
                 "text": "step1.md"
             },
             {
-                "title": "撰寫 Docker Compose 定義檔",
+                "title": "使用 Docker Compose",
                 "text": "step2.md"
             },
             {
-                "title": "準備測試腳本",
+                "title": "Service Discovery",
                 "text": "step3.md"
-            },
-            {
-                "title": "撰寫 Circle CI 設定檔",
-                "text": "step4.md"
-            },
-            {
-                "title": "使用 Circle CI 服務",
-                "text": "step5.md"
             }
         ],
         "intro": {
@@ -50,6 +42,6 @@
             "text": "finish.md"
         }
     },
-    "title": "Docker Compose & CircleCI",
-    "description": "利用投票微服務範例，來示範如何使用 Github 結合  CircleCI 自動化建構微服務架構中的單一容器"
+    "title": "Docker-Compose & Service Discovery ",
+    "description": "透過 Docker 1.12 解釋其 Docker Network 機制和 DNS-based Service Discovery "
 }

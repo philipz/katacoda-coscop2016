@@ -1,8 +1,8 @@
 {
     "live": true,
-    "pathwayId": "philipz",
-    "pathwayTitle": "philipz",
-    "id": "7",
+    "pathwayId": "docker/docker2016",
+    "pathwayTitle": "docker/docker2016",
+    "id": "4",
     "backend": {
         "imageid": "ubuntu"
     },
@@ -22,24 +22,28 @@
     "details": {
         "steps": [
             {
-                "title": "複製程式碼",
+                "title": "準備環境",
                 "text": "step1.md"
             },
             {
-                "title": "撰寫 Docker Compose 定義檔",
+                "title": "解說 Galera 定義檔",
                 "text": "step2.md"
             },
             {
-                "title": "準備測試腳本",
+                "title": "建立 Galera Cluster",
                 "text": "step3.md"
             },
             {
-                "title": "撰寫 Circle CI 設定檔",
+                "title": "解說 Wordpress 定義檔",
                 "text": "step4.md"
             },
             {
-                "title": "使用 Circle CI 服務",
+                "title": "建立 Wordpress",
                 "text": "step5.md"
+            },
+            {
+                "title": "",
+                "text": "step6.md"
             }
         ],
         "intro": {
@@ -50,6 +54,6 @@
             "text": "finish.md"
         }
     },
-    "title": "Docker Compose & CircleCI",
-    "description": "利用投票微服務範例，來示範如何使用 Github 結合  CircleCI 自動化建構微服務架構中的單一容器"
+    "title": "Docker Compose for MySQL Cluster & WordPress",
+    "description": "建立 MySQL Galera 叢集，用 Docker Compose 快速建立 Master/Master DB 架構"
 }

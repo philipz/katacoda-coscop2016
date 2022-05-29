@@ -1,1 +1,5 @@
-此操作，示範如何使用 Docker Compose 和 Docker Network 整合之功能，善用這 overlay 層疊網路，很輕鬆就可配置出可動態擴展的架構，並且無須額外設定，即可達到動態配置和負載平衡，不過此範例只適用於開發測試環境，若要應用到營運環境，則須配合 Docker Swarm 容器協同運作管理工具，部署到多台虛擬主機上。
+[AWS Lambda](http://www.ithome.com.tw/news/93920)服務的推出，進化到無需自行管理維護伺服器，並在流量大時自動擴展規模，而[淺析 serverless 架構與實作](http://abalone0204.github.io/2016/05/22/serverless-simple-crud/)文章有更深入介紹，近期更有針對此架構所發展的 [Serverless Framework](http://serverless.com/ )。
+延伸閱讀：
+[Martin Fowler - Serverless](http://martinfowler.com/bliki/Serverless.html)
+[Martin Fowler - Serverless Architectures](http://martinfowler.com/articles/serverless.html)
+

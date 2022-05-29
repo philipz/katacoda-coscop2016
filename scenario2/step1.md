@@ -1,8 +1,12 @@
-##Install Docker 1.12
-執行 `sudo apt-get -y update`{{execute}} 
-更新套件，接著安裝新版 Docker， `sudo apt-get install -y docker-engine`{{execute}} 
-，選擇保留原本設定，按 `N`{{execute}} ，完成後，執行 `docker -v` 確認版本。
-##Install Docker Compose 1.8.0
-依照 [Compose 文件](https://github.com/docker/compose/releases)，執行 ```curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` > ./docker-compose```{{execute}} 
-和 `chmod +x ./docker-compose && sudo mv ./docker-compose /usr/local/bin/docker-compose`{{execute}} 
-，完成 docker-compose 安裝，一樣確認版本 `docker-compose -v`{{execute}}  。
+##複製範例程式
+`git clone https://github.com/philipz/node_minimal`{{execute}}
+##安裝 Make 套件
+`sudo apt-get install make `{{execute}}
+##開始建置
+先 `cd node_minimal`{{execute}} ，
+接著只需要 `make`{{execute}} ，
+執行完後查看是否有建置好的 Docker 映像檔 `docker images`{{execute}} ，這樣就建置好最小 Node.js 應用程式的 Docker 映像檔。
+##確認
+執行這最小 Node.js 應用程式的 Docker 映像檔， `docker run -d -p 80:8000 philipz/minimal`{{execute}} ，啟動後，請點選上方的 **+** 符號，選擇「Web Preview host port 80」，就可看到執行結果。
+
+透過 `docker inspect philipz/minimal | more`{{execute}} 可以查看這映像檔的詳細資訊。
